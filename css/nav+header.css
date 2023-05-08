@@ -1,0 +1,600 @@
+nav {
+  height: 80px;
+  background-color: white;
+}
+nav .main_row {
+  align-items: center;
+  flex-wrap: nowrap;
+}
+nav .container-md,
+nav .row {
+  height: 100%;
+}
+nav h1 {
+  font-weight: 700;
+  font-size: 30px;
+  margin-left: 15px;
+}
+nav h1 a {
+  font-family: "Raleway", Arial, sans-serif !important;
+
+  color: black;
+  position: relative;
+}
+nav h1 a:hover {
+  color: black;
+}
+nav h1 a::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background-color: #27e1ce;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  bottom: 5px;
+  right: -10px;
+}
+.right .row {
+  align-items: center;
+}
+.right a {
+  text-align: center;
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 18px;
+  padding: 10px;
+  position: relative;
+  transition: all 0.3s;
+}
+.right a:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+.right a::after {
+  content: "";
+  position: absolute;
+  visibility: hidden;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 7px;
+  left: 10px;
+  right: 10px;
+  background-color: #27e1ce;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+nav button {
+  font-size: 18px;
+  border: 2px solid #27e1ce;
+  color: #27e1ce;
+  background-color: white;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  border-radius: 30px;
+  transition: all 0.4s;
+  padding: 3px 30px;
+  min-width: 120px;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+nav button:hover {
+  border: 2px solid #27e1ce;
+  color: white;
+  background-color: #27e1ce;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  border-radius: 30px;
+}
+.menu {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.menu_parent {
+  height: 80px;
+  margin-right: 20px;
+  display: none;
+  transform: translateY(20px);
+  position: fixed;
+  top: 0;
+  right: 1%;
+  z-index: 999;
+}
+.div1 {
+  height: 2px;
+  width: 30px;
+  background-color: black;
+  transition: all 0.2s;
+}
+.div2 {
+  height: 2px;
+  width: 30px;
+  background-color: black;
+  transition: all 0.2s;
+}
+.div3 {
+  height: 2px;
+  width: 30px;
+  background-color: black;
+  transition: all 0.2s;
+}
+
+@media screen and (max-width: 768px) {
+  .menu_parent {
+    display: block;
+  }
+
+  nav .main_row {
+    justify-content: space-between;
+  }
+
+  .right {
+    background-color: black;
+    height: 100vh;
+    width: 40%;
+    position: absolute;
+    top: 0;
+    right: -40%;
+    z-index: 90;
+    position: fixed;
+    padding: 20px;
+    transition: all 0.5s;
+  }
+  .right .row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .right a {
+    color: rgba(255, 255, 255, 0.7);
+    text-align: left;
+    padding: 0;
+  }
+  .right a:hover::after {
+    visibility: hidden;
+  }
+  .right button {
+    color: rgba(255, 255, 255, 0.7);
+    border-color: rgba(255, 255, 255, 0.7);
+    background-color: transparent;
+    width: 50%;
+    margin: 10px;
+  }
+  .right button:hover {
+    color: #27e1ce;
+    border-color: #fff;
+    background-color: white;
+  }
+}
+@media screen and (min-width: 768px) {
+  nav .main_row {
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1200px) {
+  nav button {
+    margin-left: 20px;
+  }
+}
+
+/*
+
+header below 
+
+*/
+
+header.slides {
+  height: 100vh;
+  min-height: 700px;
+  background-image: url(../images/slide_1.jpg);
+  background-position: center top;
+  background-size: cover;
+  animation-name: pictures;
+  animation-duration: 15s;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+  position: relative;
+}
+.circles {
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 32px);
+}
+
+.circle2 {
+  background: rgb(255, 255, 255);
+  opacity: 0.2;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  animation-name: circle2;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  margin: 0 10px;
+}
+.circle1 {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: rgb(255, 255, 255);
+  opacity: 0.7;
+  border-radius: 50%;
+  animation-name: circle1ANDcircle3;
+  animation-duration: 15s;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+}
+.circle3 {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: rgb(255, 255, 255);
+  opacity: 0.2;
+  border-radius: 50%;
+  animation-name: circle1ANDcircle3;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+.slider h2 {
+  font-size: 70px;
+  font-weight: 400;
+  color: #fff;
+  padding-top: 50px;
+  animation-name: jumpWords;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+.slider button {
+  font-size: 24px;
+  color: white;
+  background-color: #27e1ce;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 30px;
+  margin-top: 30px;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+.slider,
+.work_header,
+.services_header,
+.pricing_header,
+.contact_header {
+  margin: auto;
+  max-width: 1000px;
+  text-align: center;
+  position: absolute;
+  left: calc(50% - 500px);
+  top: calc(50% - 84px);
+}
+
+.slider1 {
+  visibility: visible;
+  opacity: 1;
+  animation-name: slider1ANDslider3;
+  animation-duration: 15s;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+}
+.slider2 {
+  visibility: hidden;
+  opacity: 0;
+  animation-name: slider2;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+.slider3 {
+  visibility: hidden;
+  opacity: 0;
+  animation-name: slider1ANDslider3;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+@media screen and (max-width: 992px) {
+  .slider {
+    width: 800px;
+    left: calc(50% - 400px);
+  }
+}
+@media screen and (max-width: 820px) {
+  .slider,
+  .slider3 {
+    width: 700px !important;
+    left: calc(50% - 350px) !important;
+    top: calc(50% - 180px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .slider,
+  .slider3 {
+    width: 600px !important;
+    left: calc(50% - 300px) !important;
+  }
+}
+@media screen and (max-width: 618px) {
+  .slider,
+  .slider3 {
+    width: 500px !important;
+    left: calc(50% - 250px) !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  .slider,
+  .slider3 {
+    width: 400px !important;
+    left: calc(50% - 200px) !important;
+    top: calc(50% - 220px);
+  }
+}
+
+/*
+
+
+
+it is only animation below
+
+
+
+*/
+
+@keyframes pictures {
+  8.3% {
+    background: url(../images/slide_2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center top;
+  }
+  16.6% {
+    background: url(../images/slide_2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center top;
+  }
+  24.9% {
+    background: url(../images/slide_2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center top;
+  }
+  33.2% {
+    background: url(../images/slide_2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center top;
+  }
+  41.5% {
+    background: url(../images/slide_3.jpg) no-repeat;
+    background-size: cover;
+    background-position: center top;
+  }
+  49.8% {
+    background: url(../images/slide_3.jpg) no-repeat;
+    background-size: cover;
+    background-position: center top;
+  }
+  58.1% {
+    background: url(../images/slide_3.jpg) no-repeat;
+    background-size: cover;
+    background-position: center top;
+  }
+  66.4% {
+    background: url(../images/slide_3.jpg) no-repeat;
+    background-size: cover;
+    background-position: center top;
+  }
+  74.7% {
+    background: url(../images/slide_1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center top;
+  }
+  83% {
+    background: url(../images/slide_1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center top;
+  }
+  91.3% {
+    background: url(../images/slide_1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center top;
+  }
+  99.6% {
+    background: url(../images/slide_1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center top;
+  }
+}
+@keyframes jumpWords {
+  25% {
+    padding-top: 0;
+  }
+  50% {
+    padding-top: 0;
+  }
+  75% {
+    padding-top: 0;
+  }
+  100% {
+    padding-top: 0;
+  }
+}
+@keyframes circle1ANDcircle3 {
+  8.3% {
+    opacity: 0.2;
+  }
+  16.6% {
+    opacity: 0.2;
+  }
+  24.9% {
+    opacity: 0.2;
+  }
+  33.2% {
+    opacity: 0.2;
+  }
+  41.5% {
+    opacity: 0.2;
+  }
+  49.8% {
+    opacity: 0.2;
+  }
+  58.1% {
+    opacity: 0.2;
+  }
+  66.4% {
+    opacity: 0.2;
+  }
+  74.7% {
+    opacity: 0.7;
+  }
+  83% {
+    opacity: 0.7;
+  }
+  91.3% {
+    opacity: 0.7;
+  }
+  99.6% {
+    opacity: 0.7;
+  }
+}
+@keyframes circle2 {
+  8.3% {
+    opacity: 0.2;
+  }
+  16.6% {
+    opacity: 0.2;
+  }
+  24.9% {
+    opacity: 0.2;
+  }
+  33.2% {
+    opacity: 0.2;
+  }
+  41.5% {
+    opacity: 0.7;
+  }
+  49.8% {
+    opacity: 0.7;
+  }
+  58.1% {
+    opacity: 0.7;
+  }
+  66.4% {
+    opacity: 0.7;
+  }
+  74.7% {
+    opacity: 0.2;
+  }
+  83% {
+    opacity: 0.2;
+  }
+  91.3% {
+    opacity: 0.2;
+  }
+  99.6% {
+    opacity: 0.2;
+  }
+}
+@keyframes slider1ANDslider3 {
+  8.3% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  16.6% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  24.9% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  33.2% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  41.5% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  49.8% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  58.1% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  66.4% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  74.7% {
+    visibility: visible;
+    opacity: 1;
+  }
+  83% {
+    visibility: visible;
+    opacity: 1;
+  }
+  91.3% {
+    visibility: visible;
+    opacity: 1;
+  }
+  99.6% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@keyframes slider2 {
+  8.3% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  16.6% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  24.9% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  33.2% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  41.5% {
+    visibility: visible;
+    opacity: 1;
+  }
+  49.8% {
+    visibility: visible;
+    opacity: 1;
+  }
+  58.1% {
+    visibility: visible;
+    opacity: 1;
+  }
+  66.4% {
+    visibility: visible;
+    opacity: 1;
+  }
+  74.7% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  83% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  91.3% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  99.6% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}

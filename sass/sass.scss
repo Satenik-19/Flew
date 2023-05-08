@@ -1,0 +1,8 @@
+.menu_parent:hover {
+  .menu::before {
+    bottom: 10px;
+  }
+  .menu::after {
+    top: 10px;
+  }
+}

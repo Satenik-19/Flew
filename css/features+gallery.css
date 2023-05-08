@@ -1,0 +1,136 @@
+.features h2,
+.gallerys_title h2 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 30px;
+}
+.features p {
+  max-width: 450px;
+  margin: 0 auto 50px auto;
+}
+.block h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.block {
+  padding-left: 70px;
+  max-width: 360px;
+}
+#first_section img {
+  display: inline-block;
+  position: absolute;
+}
+@media screen and (max-width: 992px) {
+  .block {
+    max-width: 800px;
+  }
+  .features p {
+    max-width: 700px;
+  }
+  .gallery_shadow:hover {
+    box-shadow: 0px 0px 1px 1px rgb(0 0 0 / 15%) !important;
+    transform: translate3d(0, 0px, 0px) !important;
+  }
+  .gallerys_title p {
+    max-width: 900px !important;
+  }
+}
+
+/*
+
+gallery below
+
+*/
+
+#gallery,
+#blog {
+  background: rgba(0, 0, 0, 0.03) !important;
+  padding-bottom: 200px;
+  position: relative;
+}
+.gallerys_title p {
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+}
+.images {
+  height: 360px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+}
+.information {
+  background-color: white;
+  padding: 50px 0 35px 0;
+}
+.gallery_shadow {
+  box-shadow: 0px 0px 2px 1px rgb(0 0 0 / 10%);
+  transition: all 0.2s;
+}
+.space {
+  margin-bottom: 50px;
+}
+
+.gallery_shadow:hover {
+  box-shadow: 0px 14px 25px -2px rgb(0 0 0 / 15%);
+  transform: translate3d(0, -4px, 5px);
+}
+.information h3 {
+  font-weight: 700;
+  font-size: 20px;
+}
+.information h5 {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  padding: 20px 0;
+}
+.button_with_arrow {
+  color: white;
+  background-color: #27e1ce;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 25px;
+  margin-bottom: 50px;
+  white-space: nowrap;
+  box-sizing: border-box;
+  position: absolute;
+  transition: all 0.3s;
+  bottom: 100px;
+  left: calc(50% - 95px);
+}
+.button_with_arrow::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: 15px;
+  width: 25px;
+  height: 25px;
+  background: url(../svg/arrow-forward-rounded.svg) no-repeat center;
+  visibility: hidden;
+}
+.button_with_arrow:hover {
+  padding-right: 50px;
+  left: calc(50% - 110px);
+}
+.button_with_arrow:hover::after {
+  visibility: visible;
+}
+
+.image1 {
+  background-image: url(../images/image_1.jpg);
+}
+.image2 {
+  background-image: url(../images/image_2.jpg);
+}
+.image3 {
+  background-image: url(../images/image_3.jpg);
+}
+.image4 {
+  background-image: url(../images/image_4.jpg);
+}
+.image5 {
+  background-image: url(../images/image_5.jpg);
+}
+.image6 {
+  background-image: url(../images/image_6.jpg);
+}

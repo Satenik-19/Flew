@@ -1,0 +1,122 @@
+#feedback {
+  background-color: white;
+}
+.title h2 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 30px;
+}
+.title p {
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+}
+
+blockquote p {
+  font-size: 20px;
+  line-height: 1.6em;
+  color: #1a1a1a;
+  max-width: 780px;
+  margin: auto;
+}
+span.author {
+  font-size: 18px;
+}
+
+#feedback img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  padding: 0;
+  margin: 50px auto;
+}
+#blog .information {
+  text-align: left;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+#blog .information p {
+  color: #7f7f7f;
+}
+
+/*
+blog's picrutes design is in features+gallery.css
+
+
+
+it is pricing section below
+
+*/
+#pricing {
+  background-color: #fcfcfc;
+  background: rgba(0, 0, 0, 0.03) !important;
+}
+.price-box {
+  padding: 30px 50px 40px 50px;
+  background-color: white;
+}
+
+.price-box h2 {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #888f94;
+  position: relative;
+  margin: auto !important;
+}
+.price-box h2 span {
+  color: #d5d8db;
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+}
+
+.price {
+  color: #6d6d6d;
+  position: relative;
+  margin-bottom: 0;
+  max-width: 160px;
+  margin: auto;
+}
+.price span:first-child {
+  font-size: 30px !important;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+.price span:nth-child(2) {
+  font-size: 72px;
+}
+.price span:nth-child(3) {
+  font-size: 13px;
+  display: block;
+  text-transform: uppercase;
+  color: #888f94;
+  transform: translate(-20px, -20px);
+}
+.price-box button {
+  padding: 10px 20px;
+  background: #5bc0de;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+}
+span.best_offer {
+  color: #27e1ce;
+}
+button.best_offer {
+  background-color: #27e1ce;
+}
+@media screen and (max-width: 992px) {
+  #pricing .gallery_shadow:hover {
+    box-shadow: 0px 14px 25px -2px rgb(0 0 0 / 15%) !important;
+    transform: translate3d(0, -4px, 5px) !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .price-box {
+    padding: 30px 20px;
+  }
+}
